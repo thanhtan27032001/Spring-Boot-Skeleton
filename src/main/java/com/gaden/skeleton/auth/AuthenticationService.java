@@ -1,10 +1,10 @@
 package com.gaden.skeleton.auth;
 
 
-import com.gaden.skeleton.config.JwtService;
-import com.gaden.skeleton.user.Role;
-import com.gaden.skeleton.user.User;
-import com.gaden.skeleton.user.UserRepository;
+import com.gaden.skeleton.security.JwtService;
+import com.gaden.skeleton.model.Role;
+import com.gaden.skeleton.model.User;
+import com.gaden.skeleton.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,6 +19,9 @@ public class AuthenticationService {
     private final JwtService jwtService;
     private final AuthenticationManager authenticationManager;
     public AuthenticationResponse register(RegisterRequest request) {
+        if (userRepository.findByEmail(request.getEmail()).isPresent()) {
+            return null;
+        }
         User user = User
                 .builder()
                 .firstName(request.getFirstName())
@@ -38,6 +41,7 @@ public class AuthenticationService {
         );
         User user = userRepository.findByEmail(request.getEmail()).orElseThrow();
         String jwt = jwtService.generateToken(user);
+        System.out.println("returnnnnnn");
         return AuthenticationResponse.builder().token(jwt).build();
     }
 }
