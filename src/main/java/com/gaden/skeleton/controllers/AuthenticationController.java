@@ -46,7 +46,7 @@ public class AuthenticationController {
     @PostMapping("/authenticate")
     public ResponseEntity<ResponseObject> authenticate(@RequestBody AuthenticationRequest request) {
         try {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(
+            return ResponseEntity.ok(
                     ResponseObject
                             .builder()
                             .status("200 OK")
