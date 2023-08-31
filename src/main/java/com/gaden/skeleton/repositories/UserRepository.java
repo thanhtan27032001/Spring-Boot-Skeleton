@@ -1,6 +1,6 @@
-package com.gaden.skeleton.repository;
+package com.gaden.skeleton.repositories;
 
-import com.gaden.skeleton.model.User;
+import com.gaden.skeleton.models.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

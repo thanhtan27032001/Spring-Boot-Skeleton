@@ -1,4 +1,4 @@
-package com.gaden.skeleton.auth;
+package com.gaden.skeleton.security.models;
 
 import lombok.*;
 

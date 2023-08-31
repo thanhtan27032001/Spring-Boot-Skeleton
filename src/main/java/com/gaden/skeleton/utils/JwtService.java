@@ -1,4 +1,4 @@
-package com.gaden.skeleton.security;
+package com.gaden.skeleton.utils;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

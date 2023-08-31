@@ -1,10 +1,10 @@
-package com.gaden.skeleton.controller;
+package com.gaden.skeleton.controllers;
 
-import com.gaden.skeleton.auth.AuthenticationRequest;
-import com.gaden.skeleton.auth.AuthenticationResponse;
-import com.gaden.skeleton.auth.AuthenticationService;
-import com.gaden.skeleton.auth.RegisterRequest;
-import com.gaden.skeleton.model.ResponseObject;
+import com.gaden.skeleton.security.models.AuthenticationRequest;
+import com.gaden.skeleton.security.models.AuthenticationResponse;
+import com.gaden.skeleton.utils.AuthenticationService;
+import com.gaden.skeleton.security.models.RegisterRequest;
+import com.gaden.skeleton.models.ResponseObject;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

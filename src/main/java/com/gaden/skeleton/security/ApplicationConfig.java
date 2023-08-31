@@ -1,6 +1,6 @@
 package com.gaden.skeleton.security;
 
-import com.gaden.skeleton.repository.UserRepository;
+import com.gaden.skeleton.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

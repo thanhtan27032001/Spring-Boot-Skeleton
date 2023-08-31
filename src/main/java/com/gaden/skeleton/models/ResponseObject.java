@@ -1,4 +1,4 @@
-package com.gaden.skeleton.model;
+package com.gaden.skeleton.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
